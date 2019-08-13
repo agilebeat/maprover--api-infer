@@ -1,4 +1,4 @@
-# Install two-bucket-lambda-infer
+# Install maprover infer api
 
 
 ### Preparing Deployment environment
