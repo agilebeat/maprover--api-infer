@@ -117,7 +117,7 @@ functions:
     events:
       - http:
           path: tweet
-          method: GET
+          method: POST
           cors: true
           private: false
 

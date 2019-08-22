@@ -19,8 +19,8 @@ mocked_geojson = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -36.30215075678218,
-          174.9156190124816
+          174.9156190124816,
+          -36.30215075678218
         ]
       },
       "properties": {
@@ -31,8 +31,8 @@ mocked_geojson = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -37.268162189409495,
-          175.48762192860363
+          175.48762192860363,
+          -37.268162189409495
         ]
       },
       "properties": {
@@ -49,6 +49,15 @@ def create_response():
         "body": json.dumps(mocked_geojson)
     }
     return response
+
+
+def create_debug_response(event):
+  response = {
+    "statusCode": 200,
+    "headers": {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+    "body": json.dumps(event['body'])
+  }
+  return response
 
 def tweetHandler(event, context):
     response = create_response()
