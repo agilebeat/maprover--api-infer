@@ -30,10 +30,10 @@ def run_classify_image(img):
     sess = tf.Graph()
     with sess.as_default() as graph:
         tf.import_graph_def(graph_def)
-        softmax_tensor = sess.get_tensor_by_name('import/activation_71/Softmax:0')
+        softmax_tensor = sess.get_tensor_by_name('import/activation_15_2/Softmax:0')
 
     with tf.Session(graph=graph) as sess:
-        predictions = sess.run(softmax_tensor, {'import/conv2d_60_input:0': img})
+        predictions = sess.run(softmax_tensor, {'import/conv2d_6_input_2:0': img})
          
     return predictions    
         
@@ -58,8 +58,8 @@ def inferHandler(event, context):
 
     predictions = run_classify_image(img)
 
-    AWS_BUCKET_NAME_rail = 'wmts-maprover'
-    AWS_BUCKET_NAME_other = 'wmts-maprover' 
+    AWS_BUCKET_NAME_rail = 'wmts.maprover.io'
+    AWS_BUCKET_NAME_other = 'wmts.maprover.io' 
 
     if predictions[0][0] > predictions[0][1]:
         dic = False
