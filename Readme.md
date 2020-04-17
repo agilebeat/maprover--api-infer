@@ -89,5 +89,6 @@ Just navigate to the bucket -> Permissions -> Cors Configuration
 
 
 ### (Check Error) 
-`serverless logs -f createThumbnails --tail`
+`serverless logs -f createThumbnails --tail` 
+https://serverless.com/framework/docs/providers/aws/cli-reference/logs/
 
