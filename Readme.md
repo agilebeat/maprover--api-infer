@@ -85,3 +85,9 @@ Just navigate to the bucket -> Permissions -> Cors Configuration
  </CORSRule>
 </CORSConfiguration>
 ```
+
+
+
+### (Check Error) 
+`serverless logs -f createThumbnails --tail`
+
